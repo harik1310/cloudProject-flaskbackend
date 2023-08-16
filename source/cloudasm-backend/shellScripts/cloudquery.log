@@ -1,0 +1,1298 @@
+2023-07-26T06:17:30Z INF Loading spec(s) args=["shellScripts/yamlfiles/short_aws_source.yaml","shellScripts/yamlfiles/postgresql.yaml"] module=cli
+2023-07-26T06:17:30Z ERR exiting with error error="failed to load spec(s) from shellScripts/yamlfiles/short_aws_source.yaml, shellScripts/yamlfiles/postgresql.yaml. Error: open shellScripts/yamlfiles/short_aws_source.yaml: no such file or directory" module=cli
+2023-07-26T06:17:30Z INF Loading spec(s) args=["shellScripts/yamlfiles/short_gcp.yaml","shellScripts/yamlfiles/postgresql.yaml"] module=cli
+2023-07-26T06:17:30Z ERR exiting with error error="failed to load spec(s) from shellScripts/yamlfiles/short_gcp.yaml, shellScripts/yamlfiles/postgresql.yaml. Error: open shellScripts/yamlfiles/short_gcp.yaml: no such file or directory" module=cli
+2023-07-26T06:17:30Z INF Loading spec(s) args=["shellScripts/yamlfiles/short_azure.yaml","shellScripts/yamlfiles/postgresql.yaml"] module=cli
+2023-07-26T06:17:30Z ERR exiting with error error="failed to load spec(s) from shellScripts/yamlfiles/short_azure.yaml, shellScripts/yamlfiles/postgresql.yaml. Error: open shellScripts/yamlfiles/short_azure.yaml: no such file or directory" module=cli
+2023-07-26T06:18:32Z INF Loading spec(s) args=["./yamlfiles/short_aws_source.yaml","./yamlfiles/postgresql.yaml"] module=cli
+2023-07-26T06:18:46Z INF Source plugin server listening address=/tmp/cq-gtoZzvdnvoNQppJb.sock module=cli
+2023-07-26T06:18:47Z INF Start sync destinations=["postgresql (v3.0.2)"] module=cli source="aws (v15.7.0)" sync_time=2023-07-26T06:18:47Z
+2023-07-26T06:18:50Z INF Destination plugin server listening address=/tmp/cq-yJmXrFppEhINTIRk.sock module=cli
+2023-07-26T06:18:50Z INF started call grpc.code=OK grpc.component=server grpc.method=Configure grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-07-26T11:48:50+05:30 grpc.time_ms=0.018 module=cli peer.address=@ protocol=grpc
+2023-07-26T06:18:50Z INF Initializing postgresql destination module=pg-dest pgx_log_level=error
+2023-07-26T06:18:50Z INF finished call grpc.code=OK grpc.component=server grpc.method=Configure grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-07-26T11:48:50+05:30 grpc.time_ms=7.376 module=cli peer.address=@ protocol=grpc
+2023-07-26T06:18:50Z INF started call grpc.code=OK grpc.component=server grpc.method=Init grpc.method_type=unary grpc.service=cloudquery.source.v1.Source grpc.start_time=2023-07-26T11:48:50+05:30 grpc.time_ms=0.022 module=cli peer.address=@ protocol=grpc
+2023-07-26T06:18:50Z INF finished call grpc.code=OK grpc.component=server grpc.method=Init grpc.method_type=unary grpc.service=cloudquery.source.v1.Source grpc.start_time=2023-07-26T11:48:50+05:30 grpc.time_ms=2.528 module=cli peer.address=@ protocol=grpc
+2023-07-26T06:18:50Z INF started call grpc.code=OK grpc.component=server grpc.method=GetDynamicTables grpc.method_type=unary grpc.service=cloudquery.source.v1.Source grpc.start_time=2023-07-26T11:48:50+05:30 grpc.time_ms=0.018 module=cli peer.address=@ protocol=grpc
+2023-07-26T06:18:50Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetDynamicTables grpc.method_type=unary grpc.service=cloudquery.source.v1.Source grpc.start_time=2023-07-26T11:48:50+05:30 grpc.time_ms=0.517 module=cli peer.address=@ protocol=grpc
+2023-07-26T06:18:50Z INF Start migration destinations=["postgresql (v3.0.2)"] module=cli source="aws (v15.7.0)"
+2023-07-26T06:18:50Z INF started call grpc.code=OK grpc.component=server grpc.method=Migrate grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-07-26T11:48:50+05:30 grpc.time_ms=0.016 module=cli peer.address=@ protocol=grpc
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_account_attributes
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_account_attributes
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_customer_gateways
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_customer_gateways
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_dhcp_options
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_dhcp_options
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_eips
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_eips
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_flow_logs
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_flow_logs
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_hosts
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_hosts
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_images
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_images
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_instances
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_instances
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_instance_statuses
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_instance_statuses
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_instance_types
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_instance_types
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_internet_gateways
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_internet_gateways
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_key_pairs
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_key_pairs
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_launch_templates
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_launch_templates
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_launch_template_versions
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_launch_template_versions
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_nat_gateways
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_nat_gateways
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_network_acls
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_network_acls
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_network_interfaces
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_network_interfaces
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_regional_configs
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_regional_configs
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_reserved_instances
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_reserved_instances
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_route_tables
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_route_tables
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_security_groups
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_security_groups
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_subnets
+2023-07-26T06:18:50Z INF End migration destinations=["postgresql (v3.0.2)"] module=cli num_tables=42 source="aws (v15.7.0)" time_took=0.285099532
+2023-07-26T06:18:50Z INF Start fetching resources destinations=["postgresql (v3.0.2)"] module=cli source="aws (v15.7.0)"
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_subnets
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_transit_gateways
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_transit_gateways
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_vpc_endpoint_service_permissions
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_vpc_endpoint_service_permissions
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_vpcs
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_vpcs
+2023-07-26T06:18:50Z INF Migrating table module=pg-dest table=aws_ec2_vpn_gateways
+2023-07-26T06:18:50Z INF Table exists, auto-migrating module=pg-dest table=aws_ec2_vpn_gateways
+2023-07-26T06:18:50Z INF finished call grpc.code=OK grpc.component=server grpc.method=Migrate grpc.method_type=unary grpc.service=proto.Destination grpc.start_time=2023-07-26T11:48:50+05:30 grpc.time_ms=282.967 module=cli peer.address=@ protocol=grpc
+2023-07-26T06:18:50Z INF started call grpc.code=OK grpc.component=server grpc.method=Sync grpc.method_type=server_stream grpc.service=cloudquery.source.v1.Source grpc.start_time=2023-07-26T11:48:50+05:30 grpc.time_ms=0.04 module=cli peer.address=@ protocol=grpc
+2023-07-26T06:18:50Z INF started call grpc.code=OK grpc.component=server grpc.method=Write2 grpc.method_type=client_stream grpc.service=proto.Destination grpc.start_time=2023-07-26T11:48:50+05:30 grpc.time_ms=3.652 module=cli peer.address=@ protocol=grpc
+2023-07-26T06:18:50Z INF All regions specified in `cloudquery.yml`. Assuming all regions module=aws-src
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_account_attributes
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_flow_logs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_instance_statuses
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_security_groups
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_key_pairs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_nat_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_network_acls
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_subnets
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_transit_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_dhcp_options
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_instance_types
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_vpc_endpoint_services
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_vpcs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ca-central-1 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_vpn_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_network_interfaces
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_internet_gateways
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_hosts
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-north-1 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-1 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-central-1 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-2 module=aws-src table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-1 module=aws-src table=aws_ec2_reserved_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-west-2 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:us-east-1 module=aws-src table=aws_ec2_eips
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-2 module=aws-src table=aws_ec2_images
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:sa-east-1 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:eu-west-3 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-south-1 module=aws-src table=aws_ec2_instances
+2023-07-26T06:18:52Z INF top level table resolver started client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_route_tables
+2023-07-26T06:18:52Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:52Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:52Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:52Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:53Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 7c0325ed-e82b-4e23-9706-3d5ec1ef4894, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:ap-southeast-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=1 table=aws_ec2_network_interfaces
+2023-07-26T06:18:53Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 7bc77c40-7fdc-4565-a9c9-742055af889e, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:ap-south-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=8 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=2 table=aws_ec2_security_groups
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=3 table=aws_ec2_subnets
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=6 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-south-1 errors=0 module=aws-src resources=1 table=aws_ec2_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:53Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 31d7eb73-0aae-40c0-908d-4c95e85f875a, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:eu-central-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=6 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:53Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 07e6c426-c9ea-49d8-88ba-76893fca5825, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:ap-northeast-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-1 errors=0 module=aws-src resources=3 table=aws_ec2_subnets
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=6 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=6 table=aws_ec2_account_attributes
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:53Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 1046d6c9-c8e3-47e2-b76d-8e1537ad2297, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:ap-northeast-2 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:53Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 3548d829-6bd0-421c-8971-cb49cbfaeabb, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:ap-northeast-3 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=3 table=aws_ec2_subnets
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:53Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 9063dbcf-74a7-4d80-9d52-f62f4be758a2, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:ap-southeast-2 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=3 table=aws_ec2_subnets
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:53Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: d46048e1-ee42-4696-b56d-69e17f6eebcd, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:eu-north-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=4 table=aws_ec2_subnets
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=8 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:53Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 22fb3cca-5b2a-4a55-8323-8d77013cde33, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:eu-west-2 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-3 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-1 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=3 table=aws_ec2_subnets
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:53Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 53227c1f-59fe-4ee2-ba7e-7eacf3e9f216, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:eu-west-3 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:53Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 4617e02c-e78b-4f03-90ae-76b18c34ecc9, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:us-west-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-west-1 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:53Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ap-northeast-2 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_key_pairs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_requests
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_fleet_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=3 table=aws_ec2_subnets
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=3 table=aws_ec2_subnets
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=3 table=aws_ec2_subnets
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=1 table=aws_ec2_key_pairs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=3 table=aws_ec2_subnets
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:54Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 487444f0-b0da-422a-a2f4-00af9a1d1efe, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:ca-central-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_spot_instance_requests
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=2 table=aws_ec2_subnets
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_templates
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_launch_template_versions
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:54Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: addebf7e-277c-42c6-a2e8-d908a52e7710, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:eu-west-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=8 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=3 table=aws_ec2_subnets
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=3 table=aws_ec2_subnets
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-3 errors=0 module=aws-src resources=6 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-2 errors=0 module=aws-src resources=6 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=6 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-north-1 errors=0 module=aws-src resources=6 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:54Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 82c51e53-9e86-4fc8-a91e-a1f4d8b79ae0, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:us-east-2 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:54Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 617a801b-4dbe-4b16-a005-cfaddddf5a6c, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:us-west-2 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_nat_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_images
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_image_launch_permissions
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_eips
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-central-1 errors=0 module=aws-src resources=8 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=4 table=aws_ec2_subnets
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=3 table=aws_ec2_subnets
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=1 table=aws_ec2_security_groups
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:54Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 1bb7ec76-7fc9-4e6d-820b-e50149173e43, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:us-east-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=0 table=aws_ec2_egress_only_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_peering_connections
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_reserved_instances
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_route_tables
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_vpc_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_peering_attachments
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_transit_gateway_multicast_domains
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_hosts
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpn_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoint_service_configurations
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:sa-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_customer_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=1 table=aws_ec2_dhcp_options
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=5 table=aws_ec2_security_groups
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=1 table=aws_ec2_network_acls
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:sa-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_network_interfaces
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ca-central-1 errors=0 module=aws-src resources=1 table=aws_ec2_vpcs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:ap-southeast-2 errors=0 module=aws-src resources=8 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:sa-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_instance_statuses
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:sa-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_flow_logs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:sa-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_byoip_cidrs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-2 errors=0 module=aws-src resources=8 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-east-1 errors=0 module=aws-src resources=6 table=aws_ec2_subnets
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:sa-east-1 errors=0 module=aws-src resources=1 table=aws_ec2_internet_gateways
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:eu-west-1 errors=0 module=aws-src resources=8 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-2 errors=0 module=aws-src resources=8 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:us-west-1 errors=0 module=aws-src resources=8 table=aws_ec2_managed_prefix_lists
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:sa-east-1 errors=0 module=aws-src resources=1 table=aws_ec2_route_tables
+2023-07-26T06:18:54Z ERR table resolver finished with error error="operation error EC2: GetEbsDefaultKmsKeyId, https response error StatusCode: 403, RequestID: 544c084c-6f65-43f8-aa43-ae8b03f105f6, api error UnauthorizedOperation: You are not authorized to perform this operation." client=940616084985:sa-east-1 module=aws-src table=aws_ec2_regional_configs
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:sa-east-1 errors=1 module=aws-src resources=0 table=aws_ec2_regional_configs
+2023-07-26T06:18:54Z INF started call grpc.code=OK grpc.component=server grpc.method=GetMetrics grpc.method_type=unary grpc.service=cloudquery.source.v1.Source grpc.start_time=2023-07-26T11:48:54+05:30 grpc.time_ms=0.028 module=cli peer.address=@ protocol=grpc
+2023-07-26T06:18:54Z INF finished call grpc.code=OK grpc.component=server grpc.method=GetMetrics grpc.method_type=unary grpc.service=cloudquery.source.v1.Source grpc.start_time=2023-07-26T11:48:54+05:30 grpc.time_ms=1.333 module=cli peer.address=@ protocol=grpc
+2023-07-26T06:18:54Z INF table sync finished client=940616084985:sa-east-1 errors=0 module=aws-src resources=0 table=aws_ec2_vpc_endpoints
+2023-07-26T06:18:54Z INF End sync destinations=["postgresql (v3.0.2)"] module=cli source="aws (v15.7.0)" sync_time=2023-07-26T06:18:47Z
+2023-07-26T06:18:54Z INF Sending sync summary to analyticsv1.cloudquery.io:443 module=cli
+2023-07-26T06:18:54Z ERR exiting with error error="received interrupt signal from OS: failed to sync v1 source aws: failed to sync source aws (v15.7.0): context canceled" module=cli
+2023-07-26T06:18:54Z INF Loading spec(s) args=["shellScripts/yamlfiles/short_gcp.yaml","shellScripts/yamlfiles/postgresql.yaml"] module=cli
+2023-07-26T06:18:54Z ERR exiting with error error="failed to load spec(s) from shellScripts/yamlfiles/short_gcp.yaml, shellScripts/yamlfiles/postgresql.yaml. Error: open shellScripts/yamlfiles/short_gcp.yaml: no such file or directory" module=cli
+2023-07-26T06:18:54Z INF Loading spec(s) args=["shellScripts/yamlfiles/short_azure.yaml","shellScripts/yamlfiles/postgresql.yaml"] module=cli
+2023-07-26T06:18:54Z ERR exiting with error error="failed to load spec(s) from shellScripts/yamlfiles/short_azure.yaml, shellScripts/yamlfiles/postgresql.yaml. Error: open shellScripts/yamlfiles/short_azure.yaml: no such file or directory" module=cli

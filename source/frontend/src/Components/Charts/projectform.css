@@ -1,0 +1,9 @@
+thead,td,tr {
+    box-shadow: "0 2px 4px rgba(0, 0, 0, 0.3)";
+    width: 300px;
+    border: 1px solid lightgrey;
+}
+td {
+    align-content: 'justify';
+    text-align: center;
+}

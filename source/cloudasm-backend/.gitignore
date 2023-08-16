@@ -1,0 +1,6 @@
+/node_modules
+/.pnp
+.pnp.js
+/.cq
+/cloudquery.log
+./shellScripts/.cq
