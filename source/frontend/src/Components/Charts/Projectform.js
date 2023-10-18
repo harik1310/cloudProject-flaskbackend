@@ -7,8 +7,9 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import "./policyselect.css";
 import './projectform.css'
-import "/home/harih/Desktop/templates/src/App.css";
+// import "/home/harih/Desktop/templates/src/App.css";
 import "../Charts/donut";
+import { url } from '../../config.js'
 
 
 export default function Projectform() {
@@ -34,7 +35,7 @@ export default function Projectform() {
     };
 
     try {
-      await axios.post('http://localhost:8000/api/projects', data);
+      await axios.post( url + '/api/projects', data);
 
       setProjectName('');
       setAwsResourceId('');
@@ -53,7 +54,7 @@ export default function Projectform() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/getprojects")
+      .get( url + "/getprojects")
       .then((response) => response.data.rows)
       .then((rows) => {
         const tableData = [];

@@ -4,8 +4,11 @@ const SECTIONS = {
     "1":{
         default: 'Identity and Access Management'
     },
+    "2":{
+        default: 'Storage'
+    },
     "3": {
-        '9':'Virtual Private cloud',
+        // '9':'Virtual Private cloud',
         default: "Logging & Monitoring",
     },
     '4':{
@@ -16,7 +19,7 @@ const SECTIONS = {
         '4':'Security groups',
                 
     },
-    default: "Misc",
+    default: "Others"
 }
 
 

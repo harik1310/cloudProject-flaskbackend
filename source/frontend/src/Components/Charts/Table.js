@@ -11,6 +11,8 @@ import CancelSharpIcon from '@mui/icons-material/CancelSharp';
 import CheckCircleSharpIcon from '@mui/icons-material/CheckCircleSharp';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import staticMethods from "antd/es/message";
+import { url } from '../../config.js'
+
 
 
 const Table = ({ chart }) => {
@@ -84,7 +86,7 @@ function Drilldowntable(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/chart")
+      .get( url + "/chart")
       .then((response) => response.data.rows)
       .then((rows) => {
         // For Table Data

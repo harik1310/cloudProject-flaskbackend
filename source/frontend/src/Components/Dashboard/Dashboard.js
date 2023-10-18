@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
-import "/home/harih/Desktop/templates/src/App.css";
+// import "../../App.css";
 import "../Charts/donut";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
@@ -20,6 +20,8 @@ import Donut from "../Charts/donut";
 import Table from "../Charts/Table";
 import DropdownBox from "../Charts/Policyselect";
 import DownloadPage from "../Downloadreport";
+import { url } from '../../config.js'
+
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { url } from '../../config.js'
 import { ProgressBar as Progress_bar } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -17,7 +17,7 @@ const ProgressBar = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/chart/aws")
+      .get( url + "/chart/aws")
       .then((response) => response.data.rows)
       .then((rows) => {
         let pass_count = 0;
@@ -38,7 +38,7 @@ const ProgressBar = () => {
       });
 
     axios
-      .get("http://localhost:8000/chart/gcp")
+      .get( url + "/chart/gcp")
       .then((response) => response.data.rows)
       .then((rows) => {
         let pass_count = 0;
@@ -59,7 +59,7 @@ const ProgressBar = () => {
       });
 
     axios
-      .get("http://localhost:8000/chart/azure")
+      .get( url + "/chart/azure")
       .then((response) => response.data.rows)
       .then((rows) => {
         let pass_count = 0;

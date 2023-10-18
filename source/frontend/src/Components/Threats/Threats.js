@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Doughnut, Pie, Bar } from "react-chartjs-2";
 import { styled } from '@mui/material/styles';
+import { url } from '../../config.js'
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
@@ -140,8 +141,8 @@ const ThreatSeverity = () => {
 
   useEffect(() => {
     // Fetch data from the first API call
-    axios.get('http://localhost:8000/getthreatpattern')
-      // axios.get('http://localhost:8000/attackpatterns')  
+    axios.get( url + '/getthreatpattern')
+      // axios.get( url + '/attackpatterns')  
       .then(response => {
         setApiData1(response.data.rows);
         const tableData = [];
@@ -152,7 +153,7 @@ const ThreatSeverity = () => {
     // console.log('pass ', passed);
 
     // Fetch data from the second API call
-    axios.get('http://localhost:8000/bardapi')
+    axios.get( url + '/bardapi')
       .then(response => {
         const data = response.data
         // console.log('json_data');

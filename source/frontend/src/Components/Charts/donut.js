@@ -1,5 +1,6 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import axios from "axios";
+import { url } from '../../config.js'
 import { useEffect, useRef, useState } from "react";
 import { Doughnut } from "react-chartjs-2";
 import ProgressBar from './progressbar.js'
@@ -41,7 +42,7 @@ export default function Donut({ chart }) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/chart")
+      .get( url + '/chart')
       .then((response) => response.data.rows)
       .then((rows) => {
         // For Table Data
@@ -88,16 +89,18 @@ export default function Donut({ chart }) {
   const handleSyncResources = async (e) => {
     console.log('syncing resources')
     try {
-      await axios.post('http://localhost:8000/shortsync-resources')
+      await axios.post( url + '/shortsync-resources')
     } catch (error) {
       console.error(error);
       alert('An error occurred while syncing resources.');
+    }finally{
+      alert('resources synced')
     }
   }
 
   const downloadFileDocument = async(e) => {
     console.log('generating a report ');
-      const {data} = await axios.get('http://localhost:8000/download-report')
+      const {data} = await axios.get( url + '/download-report')
       aref.current.href = data.base64
       aref.current.click()
 }
@@ -113,7 +116,7 @@ export default function Donut({ chart }) {
   const handlePolicies = async (e) => {
     console.log('running policies on resources')
     try {
-      await axios.post('http://localhost:8000/policyrun')
+      await axios.post( url + '/policyrun')
     } catch (error) {
       console.error(error);
       alert('An error occurred while syncing resources.');

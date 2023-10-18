@@ -1,3 +1,4 @@
+const dotenv = require('dotenv')
 const express = require("express");
 const bcrypt = require("bcrypt");
 const cors = require("cors");
@@ -9,15 +10,23 @@ const { client } = require("./database.js");
 const { spawn } = require("child_process");
 const report = require('./downloadreport.js')
 const jwt = require('jsonwebtoken')
+const { OpenAI } = require("openai");
 
-const { Configuration, OpenAIApi } = require("openai");
+
+dotenv.config();
+
+const port = 8000
+const key = process.env.API_KEY
+
+const API_ENDPOINT = 'https://api.openai.com/v1/engines/davinci-codex/completions';
 
 
-const configuration = new Configuration({
-    organization: "org-EuSvSFN4AVVf2MrYCClebuQ8",
-    apiKey: process.env.OPENAI_API_KEY,
+const openai = new OpenAI({
+  // organization: "org-EuSvSFN4AVVf2MrYCClebuQ8",
+  apiKey: key,
 });
-const openai = new OpenAIApi(configuration);
+
+// const openai = new OpenAIApi(configuration);
 // const response = await openai.listEngines();
 
 const jwt_secret = 'jwtsecretkey'
@@ -35,26 +44,26 @@ app.post('/register', async (req, res) => {
   console.log(username, password);
   const user = await client.query(`SELECT * FROM app_users where username='${username}'`)
   console.log(user);
-  
+
   if (!user) {
-    return res.json({error : 'user already exists'})
+    return res.json({ error: 'user already exists' })
   }
-  else{
+  else {
     console.log('else');
     try {
       console.log("inside");
       const hashedPassword = await bcrypt.hash(password, salt)
       const user1 = await client.query(`INSERT INTO app_users ( username, password ) VALUES ('${username}','${hashedPassword}')`)
-      if(user1){
-        return res.json({status:"OK"})
-      }  
-    }
-      catch (error) {
-        res.json({ status: 'error', error: "invalid password" })
-        console.log(error);
+      if (user1) {
+        return res.json({ status: "OK" })
       }
     }
-  })
+    catch (error) {
+      res.json({ status: 'error', error: "invalid password" })
+      console.log(error);
+    }
+  }
+})
 
 
 
@@ -62,28 +71,28 @@ app.post('/login', async (req, res) => {
   // console.log("Backend")
   const username = req.body.email;
   const password = req.body.password
-  console.log('username & pass',username, password)
+  console.log('username & pass', username, password)
   try {
-    const  { rows : users } = await client.query(`SELECT * FROM app_users where username='${username}'`)
-    
-    if (users.length === 0 ) {
+    const { rows: users } = await client.query(`SELECT * FROM app_users where username='${username}'`)
+
+    if (users.length === 0) {
       return res.json({ err: "user not found" })
     }
     const user = users[0];
-      console.log("inside")
-      console.log('user',user)
-      console.log('compare',password, user.password)
-      const token = jwt.sign({}, jwt_secret);
-      console.log(token)
-      const pass = await bcrypt.compare(password, user.password)
-      console.log(pass);
-      if (pass){
-        return res.json({ status: 'OK', token: token })
-      }
-      else{
-        return res.json({ error:"error" })
-      }
-    } catch (error) {
+    console.log("inside")
+    console.log('user', user)
+    console.log('compare', password, user.password)
+    const token = jwt.sign({}, jwt_secret);
+    console.log(token)
+    const pass = await bcrypt.compare(password, user.password)
+    console.log(pass);
+    if (pass) {
+      return res.json({ status: 'OK', token: token })
+    }
+    else {
+      return res.json({ error: "error" })
+    }
+  } catch (error) {
     res.json({ status: 'error', error: "invalid password" })
     console.log(error);
   }
@@ -114,7 +123,7 @@ app.post("/sync-resources", async (req, res) => {
 });
 
 
-// to sync the resources 
+// to sync the resources and run policies
 app.post("/shortsync-resources", async (req, res) => {
   const sync = await spawn("bash", ["./shellScripts/shortSync.sh"]);
 
@@ -137,26 +146,26 @@ app.post("/shortsync-resources", async (req, res) => {
 });
 
 // to run policies on all of the resources
-app.post("/policyrun", async (req, res) => {
-  const sync = await spawn("bash", ["./shellScripts/policyRun.sh"]);
+// app.post("/policyrun", async (req, res) => {
+//   const sync = await spawn("bash", ["./shellScripts/policyRun.sh"]);
 
-  sync.stdout.on("data", (data) => {
-    console.log(`stdout: ${data}`);
-  });
+//   sync.stdout.on("data", (data) => {
+//     console.log(`stdout: ${data}`);
+//   });
 
-  sync.stderr.on("data", (data) => {
-    console.log(`stderr: ${data}`);
-  });
+//   sync.stderr.on("data", (data) => {
+//     console.log(`stderr: ${data}`);
+//   });
 
-  sync.on("error", (error) => {
-    console.log(`error: ${error.message}`);
-  });
+//   sync.on("error", (error) => {
+//     console.log(`error: ${error.message}`);
+//   });
 
-  sync.on("close", (code) => {
-    console.log(`child process exited with code ${code}`);
-    res.sendStatus(200);
-  });
-});
+//   sync.on("close", (code) => {
+//     console.log(`child process exited with code ${code}`);
+//     res.sendStatus(200);
+//   });
+// });
 
 
 // for downloading the report
@@ -308,7 +317,8 @@ app.get('/bardapi', async (req, res) => {
   const pythonProcess = await spawn('python3', ['bard.py']);
   let response = '';
   pythonProcess.stdout.on('data', (data) => {
-    response += data;
+    // response += data;
+    response += "T1530,T1190,T1210,T1537";
   });
 
   // Capture any errors that occur during execution
@@ -329,43 +339,25 @@ app.get('/bardapi', async (req, res) => {
   })
 })
 
-// async function sendMessage(message) {
+// app.post('/bardapi', async (req, res) => {
 //   try {
-//     const apiKey = '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'
-//     const response = await axios.get('https://api.openai.com/v1/answers', {
-//       params: {
-//         model: 'gpt-3.5-turbo',
-//         question: message,
-//         max_tokens: 100,
-//         temperature: 0.6,
-//         n: 1
-//       },
+//     const response = await axios.post(API_ENDPOINT, {
+//       prompt: req.body.prompt,
+//       max_tokens: req.body.max_tokens,
+//     }, {
 //       headers: {
+//         'Authorization': `Bearer ${key}`,
 //         'Content-Type': 'application/json',
-//         'Authorization': `Bearer ${apiKey}`
-//       }
+//       },
 //     });
-  
-//     const { answers } = response.data;
-//     const reply = answers[0].text;
-//     return reply;
-//   } catch (error) {
-//     console.error('Error:', error);
-//     return 'An error occurred while communicating with the ChatGPT.';
-//   }
-// }
 
-// app.get('/bardapi', async (req, res) => {
-//   try {
-//     const question = 'Give me top 10 ATT&CK cloud attacks';
-//     const answer = await sendMessage(question);
-//     res.json({ answer });
+//     const generatedText = response.data.choices[0].text;
+//     res.json({ generatedText });
 //   } catch (error) {
-//     console.error('Error:', error);
-//     res.status(500).json({ error: 'An error occurred while retrieving the answer.' });
+//     console.error('Error:', error.message);
+//     res.status(500).json({ error: 'An error occurred.' });
 //   }
 // });
-
 
 app.get('/getthreatpattern', async (req, res) => {
 
@@ -402,12 +394,10 @@ ORDER BY policy_results.status;`)
   } catch (error) {
     console.log(error)
   }
-
-
 }
 )
 
-app.listen(8000, () => {
+app.listen(port, () => {
   console.log("listening on 8000");
 });
 

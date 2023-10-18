@@ -15,6 +15,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { url } from '../config.js'
+
 
 
 const theme = createTheme();
@@ -40,7 +42,7 @@ export default function SignIn() {
       password: data.get('password'),
     }
     console.log(requestData)
-    axios.post('http://localhost:8000/login',requestData).then(response=>{
+    axios.post( url + '/login',requestData).then(response=>{
       if(response.data.status === "OK"){
         const token = response.data.token
         sessionStorage.setItem("token",token)

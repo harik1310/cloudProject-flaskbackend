@@ -1,6 +1,6 @@
-import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Box from '@mui/material/Box'
+import axio from 'axios';
 import SignIn from "./Components/SignIn";
 import SignUp from "./Components/SignUp";
 import Mainpage from "./Components/Mainpage";
@@ -12,6 +12,7 @@ import PrimarySearchAppBar from "./Components/Dashboard/Topnav/Topnav";
 import Myresources from "./Components/Myresources/MyResources";
 import Policies from "./Components/Policies/Policies";
 import ThreatSeverity from "./Components/Threats/Threats";
+// import "./App.css";
 
 function App() {
   return (

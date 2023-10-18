@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { url } from '../../config.js'
 import CancelSharpIcon from '@mui/icons-material/CancelSharp';
 import CheckCircleSharpIcon from '@mui/icons-material/CheckCircleSharp';
 import './Attack.css'
@@ -11,23 +12,23 @@ const AttackPatterns = () => {
     fetchData();
   }, []);
 
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await axios.get('http://localhost:8000/attackpatterns');
-  //     setData(response.data.rows);
-  //   } catch (error) {
-  //     console.error('Error fetching data:', error);
-  //   }
-  // };
-
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/bardapi');
+      const response = await axios.get('http://localhost:8000/attackpatterns');
       setData(response.data.rows);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   };
+
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await axios.post( url +'/bardapi');
+  //     setData(response.data.rows);
+  //   } catch (error) {
+  //     console.error('Error fetching data:', error);
+  //   }
+  // };
 
   const filteredRows = data.filter(row => {
     return row.techniques !== 'NaN' && row.tactics !== 'NaN' && row.mitigations !== 'NaN';

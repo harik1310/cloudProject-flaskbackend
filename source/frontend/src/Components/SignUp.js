@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { url } from '../config.js'
 
 
 
@@ -33,7 +34,7 @@ export default function SignUp() {
       password: userData.get('password'),
     });
 
-    axios.post('http://localhost:8000/register',requestData)
+    axios.post( url + '/register',requestData)
     .then(response=>{
       if(response.data.status === 'OK'){
         navigate('/')
